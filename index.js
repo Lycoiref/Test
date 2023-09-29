@@ -31,6 +31,6 @@ router.use('/users', userRouter.routes())
 
 app.use(router.routes());
 
-app.listen(3001, () => {
+app.listen(1888, () => {
   console.log('server is running at port 3000');
 })
