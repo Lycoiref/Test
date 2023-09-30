@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</title>
+  <link rel="shortcut icon" href="https://www.bilibili.com/favicon.ico?v=1" />
+</head>
+
+<body>
+  <div id="header">
+    <div class="top-bar">
+      <div class="left-bar bar">
+        <div class="bar-text">首页</div>
+        <div class="bar-text">番剧</div>
+        <div class="bar-text">直播</div>
+        <div class="bar-text">游戏中心</div>
+        <div class="bar-text">会员购</div>
+      </div>
+      <div class="search-bar bar">
+        <input type="text" id="search" placeholder="请输入内容">
+      </div>
+      <div class="right-bar bar">
+        <div class="bar-text">大会员</div>
+        <div class="bar-text">消息</div>
+        <div class="bar-text">动态</div>
+        <div class="bar-text">收藏</div>
+        <div class="bar-text">历史</div>
+        <button>投稿</button>
+      </div>
+    </div>
+    <img class="top-img" src="./static/topBar.webp" alt="bilibili图片" />
+  </div>
+  <div id="content">
+    <div class="content-part sort-label">
+      <div class="sort-left">
+        <div>动态</div>
+        <div>热门</div>
+      </div>
+      <div class="sort-content">
+        <div class="lines">
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+        </div>
+        <div class="lines">
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+          <div class="line-item"></div>
+        </div>
+      </div>
+      <div class="sort-right">
+        <div class="lines">
+          <div>专栏</div>
+          <div>活动</div>
+          <div>社区中心</div>
+        </div>
+        <div class="lines">
+          <div>直播</div>
+          <div>课堂</div>
+          <div>新歌热榜</div>
+        </div>
+      </div>
+    </div>
+    <div class="content-part recommend-videos">
+      <div class="recommend-left">
+        <!-- 这里事实上是一个轮播图，这里只讲布局，不过多赘述 -->
+        <!-- <img src="./static/recommend.webp" alt="推荐视频1" /> -->
+      </div>
+      <div class="recommend-right">
+        <div class="lines">
+          <div class="video-item">
+            <img src="./static/recommend1.webp" alt="推荐视频1" />
+            <div class="video-title">程序员都哭了，版本更新出7个bug！全是bug！</div>
+            <div class="video-author">覆雪之下-- · 9-27</div>
+          </div>
+          <div class="video-item">
+            <img src="./static/recommend1.webp" alt="推荐视频1" />
+            <div class="video-title">程序员都哭了，版本更新出7个bug！全是bug！</div>
+            <div class="video-author">覆雪之下-- · 9-27</div>
+          </div>
+          <div class="video-item">
+            <img src="./static/recommend1.webp" alt="推荐视频1" />
+            <div class="video-title">程序员都哭了，版本更新出7个bug！全是bug！</div>
+            <div class="video-author">覆雪之下-- · 9-27</div>
+          </div>
+        </div>
+        <div class="lines">
+          <div class="video-item">
+            <img src="./static/recommend1.webp" alt="推荐视频1" />
+            <div class="video-title">程序员都哭了，版本更新出7个bug！全是bug！</div>
+            <div class="video-author">覆雪之下-- · 9-27</div>
+          </div>
+          <div class="video-item">
+            <img src="./static/recommend1.webp" alt="推荐视频1" />
+            <div class="video-title">程序员都哭了，版本更新出7个bug！全是bug！</div>
+            <div class="video-author">覆雪之下-- · 9-27</div>
+          </div>
+          <div class="video-item">
+            <img src="./static/recommend1.webp" alt="推荐视频1" />
+            <div class="video-title">程序员都哭了，版本更新出7个bug！全是bug！</div>
+            <div class="video-author">覆雪之下-- · 9-27</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-part other-videos"></div>
+  </div>
+</body>
+<style>
+  body {
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  img {
+    display: block;
+  }
+
+  .top-img {
+    width: 100%;
+  }
+
+  .top-bar {
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bar {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .bar-text {
+    cursor: pointer;
+  }
+
+  .search-bar {
+    flex: 2;
+  }
+
+  .content-part {
+    width: 90%;
+  }
+
+  /* 标签部分 */
+  .sort-label {
+    margin-top: 20px;
+    display: flex;
+    height: 120px;
+  }
+
+  .sort-left {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .sort-content {
+    flex: 10;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: 1px solid #dbdbdb;
+    border-width: 0 1px 0 0;
+  }
+
+  .sort-right {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .lines {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+  }
+
+  .line-item {
+    flex: 1;
+    margin: 5px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #dbdbdb;
+  }
+
+  .recommend-videos {
+    margin-top: 20px;
+    height: 500px;
+    display: flex;
+  }
+
+
+  .recommend-left {
+    height: 90%;
+    background-color: rgb(48, 42, 99);
+    border-radius: 15px;
+    flex: 4;
+  }
+
+  .recommend-left {
+    width: 100%;
+    height: 85%;
+  }
+
+  .recommend-right {
+    flex: 6;
+  }
+
+  .video-item {
+    height: 100%;
+    margin: 0 10px;
+    /* margin: 10px; */
+  }
+
+  .video-item img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .video-title {
+    height: 40px;
+    font-size: 14px;
+    margin-top: 5px;
+    line-height: 20px;
+  }
+
+  .video-author {
+    font-size: 13px;
+    color: #949494;
+    line-height: 20px;
+  }
+
+  .video-author:hover,
+  .video-title:hover {
+    color: rgb(0, 174, 236);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  #search {
+    width: 40%;
+    height: 30px;
+    border-radius: 5px;
+    border: 0;
+    padding-left: 10px;
+    background-color: #ebebeb;
+  }
+
+  #content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
+<script>
+</script>
+
+</html>
